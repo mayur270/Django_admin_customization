@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django Admin Customization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body style="color: #411F1F">
+    <h1>Customizing Django Admin</h1>
+    <form class="" method="post" class='ui form' enctype='multipart/form-data' style=" border: 2px solid #411F1F; padding: 5px 2px 5px 5px; max-width: 380px;">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit" class='ui button primary' name="button">Confirm</button>
+    </form>
+    <br>
+    <a href='/admin' style="background: #411F1F; padding: 5px; max-width: 380px; text-decoration: none;
+                  color: #fff; font-weight: 400; font-family:sans-serif; font-size:13px; border-radius: 2px;">Click Here for Django Admin</a>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+.module h2, .module caption, .inline-group h2, #header
+{
+    text-align: left;
+    background-color: #411F1F;
+    color: #fff;
+}
+
+.content h1{
+  font-weight:400;
+  color: #411F1F;
+}
+
+#site-name a {
+  font-weight: bold;
+}
+
+.module caption, .module {
+  border-radius: 10px;
+}
+
+#content caption a {
+  color: #f5dd5d;
+}
+
+.content{
+  background: url("/static/admin/admin_bg.jpg") no-repeat;
+}
+
+#content-related .module h2 {
+  background: #411F1F;
+  font-weight:400;
+  color:#f5dd5d;
+  border-radius: 10px;
+}
+
+#content-related {
+  border-radius: 10px;
+}
+
+
+</style>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
